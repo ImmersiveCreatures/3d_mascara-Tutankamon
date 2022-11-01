@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="tutankamon_V3.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.48" environment-image="pillars_1k.hdr" exposure="1.16" shadow-softness="1" camera-orbit="743.6deg 78.34deg auto">
+      <button class="Hotspot" slot="hotspot-1" data-position="3.370241051308382m 17.2633818253131m 2.1683579646182505m" data-normal="0.8081777440010061m 0.4051532389735052m 0.4274337224070207m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Mide 54 cm de alto y 49 cm de profundidad.</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-3.172252918467582m 5.296292766261844m -6.424544077530563m" data-normal="-0.0021264908489010926m 0.1944752762314674m -0.9809051151723922m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Las líneas verticales y horizontales son un hechizo protector.</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-5.502407833666167m 8.545926398826449m -1.1681622907470226m" data-normal="-0.5737066027023956m -0.8143636251026235m -0.08759349362475075m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Está cubierto por dos capas de oro que pesan más de 10kg.</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
